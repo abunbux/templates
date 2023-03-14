@@ -1,0 +1,15 @@
+# -*- mode: org; -*-
+#+TITLE: README
+#+DESCRIPTION:
+#+KEYWORDS:
+#+AUTHOR:
+#+email:
+#+INFOJS_OPT:
+#+STARTUP:  content
+
+#+DATE: CREATED: <Tue Mar 14 19:24:48 MSK 2023>
+# Time-stamp: <Последнее обновление -- Tuesday March 14 23:44:32 MSK 2023>
+
+Чекбоксы оформлялись с помощью [[https://www.youtube.com/@pepelsbey][Вадима Макеева]].
+
+[[https://www.youtube.com/watch?v=E6kLaaQFctU][Кастомные чекбоксы правильно]].
