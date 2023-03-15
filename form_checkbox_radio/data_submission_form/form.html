@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,700&family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&display=swap");
+
+      /* font-family: 'DM Sans', sans-serif;
+        font-family: 'Merriweather', serif;
+        font-family: 'Poppins', sans-serif; */
+
+      .wrapper {
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 15px 15px 15px 25px;
+        border: solid 1px rgb(230, 175, 93);
+        background-color: blanchedalmond;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgb(228, 152, 38);
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      form * {
+        outline: none;
+      }
+      input {
+        cursor: pointer;
+      }
+
+      .input__text {
+        width: 100%;
+      }
+      fieldset {
+        margin-bottom: 15px;
+        color: rgb(119, 78, 16);
+        border: 1px solid rgb(230, 175, 93);
+        box-shadow: 2px 2px 5px rgb(235, 175, 85);
+      }
+      legend {
+        padding: 0 4px 4px 4px;
+        font-size: 16px;
+        font-family: "Merriweather", serif;
+        color: rgba(168, 130, 59, 0.87);
+      }
+
+      label {
+        cursor: pointer;
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+      }
+
+      select {
+        cursor: pointer;
+      }
+
+      .necessarily {
+        color: red;
+      }
+
+      .radio__choice {
+        position: relative;
+      }
+
+      .radio__choice-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin-left: -1px;
+        border: 0;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+      }
+
+      .radio__choice-visible {
+        padding-left: 25px;
+      }
+
+      .radio__choice-visible::before {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        border: 1px solid rgb(228, 144, 19);
+      }
+
+      .radio__choice-visible::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        top: 7px;
+        left: 2px;
+        background-color: rgb(174, 235, 31);
+        border: 1px solid rgb(228, 144, 19);
+        opacity: 0;
+      }
+
+      .radio__choice-hidden:checked + .radio__choice-visible::before {
+        background-color: rgb(238, 208, 77);
+      }
+
+      .radio__choice-hidden:checked + .radio__choice-visible::after {
+        opacity: 1;
+      }
+
+    </style>
+    <title>Форма отправки данных</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Имя<span class="necessarily">*</span>:</legend>
+          <input type="text" class="input__text" name="username" tabindex="1" placeholder="Иван, например" />
+        </fieldset>
+        <fieldset>
+          <legend>Пароль<span class="necessarily">*</span>:</legend>
+          <input type="password" class="input__text" name="userpass" tabindex="2" />
+        </fieldset>
+        <fieldset>
+          <legend>Телефон<span class="necessarily">*</span>:</legend>
+          <input type="tel" class="input__text" name="phone" tabindex="3" placeholder="+79999999999" />
+        </fieldset>
+        <fieldset>
+          <legend>Электронная почта<span class="necessarily">*</span>:</legend>
+          <input type="email" class="input__text" name="email" tabindex="4" />
+        </fieldset>
+        <fieldset>
+          <legend>Пол:</legend>
+          <div class="radio__choice">
+            <input class="radio__choice-hidden" type="radio" name="gender" tabindex="5" id="gender_male" value="male" />
+            <label class="radio__choice-visible" for="gender_male">Мужчина</label>
+          </div>
+          <div class="radio__choice">
+            <input class="radio__choice-hidden" type="radio" name="gender" tabindex="5" id="gender_female" value="female" />
+            <label class="radio__choice-visible" for="gender_female">Женщина</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Какую трансмиссию предпочитаете?</legend>
+          <div class="radio__choice">
+            <input class="radio__choice-hidden" type="radio" name="kpp" id="input_mkpp" />
+            <label class="radio__choice-visible" for="input_mkpp">Механика</label>
+          </div>
+          <div class="radio__choice">
+            <input class="radio__choice-hidden" type="radio" name="kpp" id="input_akpp" />
+            <label class="radio__choice-visible" for="input_akpp">Автомат</label>
+          </div>
+          <div class="radio__choice">
+            <input class="radio__choice-hidden" type="radio" name="kpp" id="input_robot" />
+            <label class="radio__choice-visible" for="input_robot">Робот</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Выберите способ оплаты<span class="necessarily">*</span>:</legend>
+          <select id="card" name="usercard">
+            <option value="visa">Visa</option>
+            <option value="mc">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
