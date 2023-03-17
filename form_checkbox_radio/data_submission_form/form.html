@@ -4,196 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,700&family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&display=swap");
-
-      /* font-family: 'DM Sans', sans-serif;
-        font-family: 'Merriweather', serif;
-        font-family: 'Poppins', sans-serif; */
-
-      .wrapper {
-        max-width: 320px;
-        margin: 0 auto;
-        padding: 15px 15px 15px 25px;
-        border: solid 1px rgb(230, 175, 93);
-        background-color: blanchedalmond;
-        border-radius: 10px;
-        box-shadow: 2px 2px 5px rgb(228, 152, 38);
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-      }
-      form * {
-        outline: none;
-      }
-
-      .input__text {
-        width: 100%;
-        border: 1px solid rgb(228, 144, 19);
-        border-radius: 8px;
-        font-family: "DM Sans", sans-serif;
-        font-size: 16px;
-        color: rgb(119, 78, 16);
-        font-weight: 500;
-      }
-
-      fieldset {
-        margin-bottom: 15px;
-        color: rgb(119, 78, 16);
-        border: 1px solid rgb(230, 175, 93);
-        box-shadow: 2px 2px 5px rgb(235, 175, 85);
-      }
-
-      legend {
-        padding: 0 4px 4px 4px;
-        font-size: 16px;
-        font-family: "Merriweather", serif;
-        color: rgba(168, 130, 59, 0.87);
-      }
-
-      label {
-        cursor: pointer;
-        font-size: 16px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-      }
-
-      select {
-        cursor: pointer;
-      }
-
-      /* Поля, обязательные к заполнению */
-      .necessarily {
-        color: red;
-      }
-
-      /* -----------------------------------------------------
-
-      /* Делаю свои радиокнопки */
-
-      /* div - родитель, содержащий и input и label */
-      .radio__choice {
-        position: relative;
-      }
-
-      /* input, который мы скрываем */
-      .radio__choice-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin-left: -1px;
-        border: 0;
-        padding: 0;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-      }
-
-      /* label - перед которым делаем радиокнопку вместо скрытой */
-      .radio__choice-visible {
-        padding-left: 25px;
-      }
-
-      .radio__choice-visible::before {
-        content: "";
-        display: block;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        position: absolute;
-        top: 5px;
-        left: 0;
-        border: 1px solid rgb(228, 144, 19);
-      }
-
-      .radio__choice-visible::after {
-        content: "";
-        display: block;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        position: absolute;
-        top: 8px;
-        left: 3px;
-        background-color: rgb(39, 162, 245);
-        border: 1px solid rgb(228, 144, 19);
-        opacity: 0;
-        transition: opacity 0.3s linear;
-      }
-
-      .radio__choice-hidden:checked + .radio__choice-visible::before {
-        background-color: rgb(243, 234, 192);
-        border: 1px solid rgb(241, 124, 14);
-      }
-
-      .radio__choice-hidden:checked + .radio__choice-visible::after {
-        opacity: 1;
-      }
-
-      /* Стили для select */
-      .select {
-        position: relative;
-        margin-bottom: 1rem;
-      }
-
-      .select::after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 12px 4px 0 4px;
-        border-color: rgb(241, 124, 14) transparent transparent transparent;
-        position: absolute;
-        top: 30%;
-        right: 3%;
-        pointer-events: none;
-      }
-
-      .select select {
-        display: block;
-        width: 100%;
-        background: none;
-        border: 1px solid rgb(228, 144, 19);
-        border-radius: 8px;
-        padding: 2px 6px 2px 18px;
-        -webkit-appearance: none;
-        appearance: none;
-        font-family: "DM Sans", sans-serif;
-        font-size: 16px;
-        color: rgb(119, 78, 16);
-        font-weight: 500;
-      }
-
-      .select select:focus {
-        outline: 0;
-        border-color: rgb(119, 78, 16);
-      }
-
-      /* Кнопка отправки */
-      .btn__submit {
-        cursor: pointer;
-        padding: 5px;
-        font-size: 16px;
-        font-family: 'Merriweather', serif;
-        text-transform: uppercase;
-        border-width: 1px;
-        color: #ffffff;
-        border-color: #54381e;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
-        border-bottom-left-radius: 3px;
-        border-bottom-right-radius: 3px;
-        box-shadow: inset 0px 1px 0px 0px #a6827e;
-        text-shadow: inset 0px 1px 0px #54381e;
-        background: linear-gradient(#a56505, #704f07);
-      }
-
-      .btn__submit:hover {
-        background: linear-gradient(#634b30, #7d5d3b);
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
     <title>Форма отправки данных</title>
   </head>
   <body>
@@ -239,6 +50,32 @@
           <div class="radio__choice">
             <input class="radio__choice-hidden" type="radio" name="kpp" id="input_robot" />
             <label class="radio__choice-visible" for="input_robot">Робот</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Вы любите?</legend>
+          <div class="love__">
+            <div class="love__checkbox">
+              <label class="check option">
+                <input class="check__input" type="checkbox" />
+                <div class="check__box"></div>
+                <span>Детей?</span>
+              </label>
+              <label class="check option">
+                <input class="check__input" type="checkbox" />
+                <div class="check__box"></div>
+                <span>Людей?</span>
+              </label>
+              <label class="check option">
+                <input class="check__input" type="checkbox" />
+                <div class="check__box"></div>
+                <span>Животных?</span>
+              </label>
+              <label class="check option">
+                <input class="check__input" type="checkbox" />
+                <div class="check__box"></div>
+                <span>Кого-нибудь?</span>
+              </label>
           </div>
         </fieldset>
         <fieldset>
