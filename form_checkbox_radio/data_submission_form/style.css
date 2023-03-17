@@ -4,6 +4,12 @@
         font-family: 'Merriweather', serif;
         font-family: 'Poppins', sans-serif; */
 
+/* Обнуление */
+*,
+::before, ::after {
+    box-sizing: border-box;
+}
+
 .wrapper {
   max-width: 320px;
   margin: 0 auto;
@@ -190,6 +196,11 @@ span {
 
 /* Раздел - любите ли Вы? love__ */
 
+.love__checkbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .option {
   display: block;
   margin-bottom: 0.25em;
@@ -197,6 +208,7 @@ span {
 
 .check {
   padding-left: 18px;
+  width: 50%;
 }
 
 .check__input {
