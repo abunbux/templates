@@ -8,7 +8,7 @@
 #+STARTUP:  content
 
 #+DATE: CREATED: <Fri Mar 24 22:35:33 MSK 2023>
-# Time-stamp: <Последнее обновление -- Saturday March 25 0:9:56 MSK 2023>
+# Time-stamp: <Последнее обновление -- Saturday March 25 0:28:11 MSK 2023>
 
 Образец макета взят у [[https://www.youtube.com/@ivashov/featured][Анатолия Ивашова]], он  рассказывал о нём в видео
 [[https://www.youtube.com/watch?v=wmaIWvWwX3c][Никто не знает об этом способе верстки! html & css]].
@@ -39,13 +39,13 @@
    за счёт строки (*rows*) была создана высота *header* 80px, но после использования мной общего
    контейнера эти стили перестали срабатывать.
 
-   - К блоку *header* были применены стили
+   - К блоку *header* у автора были применены стили
 
      #+begin_src css
      padding: 0 calc(50% - var(--contentWidth) / 2);
      #+end_src
 
-     а к блоку с оригинальным классом *block*
+     а к блоку с оригинальным классом *block* у него же (Ивашова) добавлен стиль
 
      #+begin_src css
      margin: 0 calc(50% - var(--contentWidth) / 2);
@@ -53,5 +53,20 @@
 
      в результате чего общий вид стал вот таким:
 
-
      [[alt text][https://github.com/abunbux/templates/blob/main/layout/layout_without_container/README_img/Screenshot_20230324_234608.png]]
+
+     То есть, простым языком: за счёт стиля *padding* к *header* шапка осталась длинною во всю страницу,
+     но сами элементы шапки (логотип, меню, форма входа) как бы помещены в те же рамки, что и
+     основной контент, располагаемый в блоке *block*.
+
+     Ну а за счёт стиля *margin* к *block* и создан тот самый ограничивающий контейнер.
+
+     Я на 0.5 изменил *padding* у *header* (можно и больше, или чуть меньше)
+
+     #+begin_src css
+     padding: 0 calc(50% - var(--contentWidth) / 2.5);
+     #+end_src
+
+     Вот результат:
+
+      [[alt text][https://github.com/abunbux/templates/blob/main/layout/layout_without_container/README_img/Screenshot_20230325_002606.png]]
