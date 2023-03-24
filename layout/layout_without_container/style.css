@@ -1,0 +1,109 @@
+@import url('./../../reset.css');
+:root {
+  --bg: deepskyblue;
+  --color: white;
+  --padding: 15px;
+
+  /* Size */
+  --desktop: 1000px;
+  --notebook: 992px;
+  --tablet: 768px;
+  --mobile: 480px;
+  --mobile_small: 90%;
+
+  --contentWidth: var(--desktop);
+  --padding: 15px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  font-family: Rubik, sans-serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 80px;
+  background: #ddd;
+} */
+
+body,
+html {
+  height: 100%;
+  font-family: Rubik, sans-serif;
+}
+
+/* Общий контейнер, добавлен, чтобы прибить футер к низу страницы */
+/* Для этих же целей к центральному блоку (class="block") добавлен «flex: 1 0 auto;», */
+/* а к body и html добавлен «height: 100%;» */
+/* Подробности смотрим у Жени Андриканич https://www.youtube.com/shorts/kNGYuTelE3E */
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  padding: 0 calc(50% - var(--contentWidth) / 2.5);
+}
+
+.header div {
+  padding: 30px 10px;
+}
+
+.block {
+  flex: 1 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px;
+  background: white;
+  padding: 30px;
+  margin: 0 calc(50% - var(--contentWidth) / 2);
+}
+
+.block__right {
+  border-left: 1px solid rgb(197, 194, 194);
+}
+
+.content p, h1 {
+  padding: 5px 10px 0 15px;
+}
+
+.block__img {
+  width: 100%;
+}
+
+.footer {
+  margin: 0 calc(50% - var(--contentWidth) / 2);
+}
+
+/* Адаптивность */
+@media (max-width: 1000px) {
+  :root {
+    --contentWidth: var(--notebook);
+  }
+}
+@media (max-width: 992px) {
+  :root {
+    --contentWidth: var(--tablet);
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --contentWidth: var(--mobile);
+  }
+}
+@media (max-width: 480px) {
+  :root {
+    --contentWidth: var(--mobile_small);
+  }
+  .block {
+    grid-template-columns: 1fr;
+    align-content: start;
+  }
+}
