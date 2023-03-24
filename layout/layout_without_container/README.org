@@ -8,7 +8,7 @@
 #+STARTUP:  content
 
 #+DATE: CREATED: <Fri Mar 24 22:35:33 MSK 2023>
-# Time-stamp: <Последнее обновление -- Saturday March 25 0:28:11 MSK 2023>
+# Time-stamp: <Последнее обновление -- Saturday March 25 0:33:56 MSK 2023>
 
 Образец макета взят у [[https://www.youtube.com/@ivashov/featured][Анатолия Ивашова]], он  рассказывал о нём в видео
 [[https://www.youtube.com/watch?v=wmaIWvWwX3c][Никто не знает об этом способе верстки! html & css]].
@@ -70,3 +70,8 @@
      Вот результат:
 
       [[alt text][https://github.com/abunbux/templates/blob/main/layout/layout_without_container/README_img/Screenshot_20230325_002606.png]]
+
+** Будучи в здравом уме и твёрдой памяти
+
+   я прекрасно понимаю, что Анатолий набросал этот образец, чтобы продемонстрировать нам идею, я её
+   понял, ну а дальше буду кромсать код и добавлять свой для тренировки.
