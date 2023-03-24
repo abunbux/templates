@@ -8,7 +8,7 @@
 #+STARTUP:  content
 
 #+DATE: CREATED: <Fri Mar 24 22:35:33 MSK 2023>
-# Time-stamp: <Последнее обновление -- Saturday March 25 0:1:24 MSK 2023>
+# Time-stamp: <Последнее обновление -- Saturday March 25 0:5:9 MSK 2023>
 
 Образец макета взят у [[https://www.youtube.com/@ivashov/featured][Анатолия Ивашова]], он  рассказывал о нём в видео
 [[https://www.youtube.com/watch?v=wmaIWvWwX3c][Никто не знает об этом способе верстки! html & css]].
@@ -59,4 +59,6 @@
 
      [[file:README_img/Screenshot_20230324_234608.png][Скриншот оригинального макета Анатолия Ивашова.]]
 
-     ./README_img/Screenshot_20230324_234608.png
+
+
+     ![alt text](./README_img/Screenshot_20230324_234608.png)
