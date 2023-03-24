@@ -8,7 +8,7 @@
 #+STARTUP:  content
 
 #+DATE: CREATED: <Fri Mar 24 22:35:33 MSK 2023>
-# Time-stamp: <Последнее обновление -- Saturday March 25 0:7:24 MSK 2023>
+# Time-stamp: <Последнее обновление -- Saturday March 25 0:9:25 MSK 2023>
 
 Образец макета взят у [[https://www.youtube.com/@ivashov/featured][Анатолия Ивашова]], он  рассказывал о нём в видео
 [[https://www.youtube.com/watch?v=wmaIWvWwX3c][Никто не знает об этом способе верстки! html & css]].
@@ -42,23 +42,15 @@
    - К блоку *header* были применены стили
 
      #+begin_src css
-
      padding: 0 calc(50% - var(--contentWidth) / 2);
-
      #+end_src
 
      а к блоку с оригинальным классом *block*
 
      #+begin_src css
-
      margin: 0 calc(50% - var(--contentWidth) / 2);
-
      #+end_src
 
-     в результате чего общий вид стал вот таким
+     в результате чего общий вид стал вот таким:
 
-     [[file:README_img/Screenshot_20230324_234608.png][Скриншот оригинального макета Анатолия Ивашова.]]
-
-
-
-     ![[alt text][https://github.com/abunbux/templates/blob/main/layout/layout_without_container/README_img/Screenshot_20230324_234608.png]]
+     [[alt text][https://github.com/abunbux/templates/blob/main/layout/layout_without_container/README_img/Screenshot_20230324_234608.png]]
