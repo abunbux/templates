@@ -1,0 +1,78 @@
+@import url("./../reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --bg_color: #02a4fd;
+  --he_color: #381b04;
+  --fo_color: #582c08;
+  --text_color: white;
+  --fo_link_color: #e6a876;
+}
+body,
+html {
+  height: 100%;
+  font-family: "Rubik", sans-serif;
+  grid-template-rows: auto 1fr;
+}
+
+.wrapper {
+  max-width: 1240px;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.1em;
+}
+
+.header {
+  padding: 40px;
+  background-color: var(--he_color);
+  color: var(--text_color);
+
+  &__logo {
+    font-size: 2.4em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+}
+.adaptive {
+  height: 100%;
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 0.15em;
+  background-image: url("./img/spider_web2.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.adaptive > * {
+  text-transform: uppercase;
+  /* color: var(--text_color);
+        background: var(--bg_color); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+}
+
+.aside {
+}
+
+.footer {
+  background-color: var(--fo_color);
+
+  &__footer__nav {
+    margin: 1.2em;
+  }
+
+  &__footer__nav-li {
+    &__footer__nav-li a {
+      color: var(--fo_link_color);
+      font-size: 0.75em;
+      text-transform: uppercase;
+    }
+  }
+}

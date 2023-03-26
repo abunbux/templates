@@ -1,0 +1,13 @@
+# -*- mode: org; -*-
+#+TITLE: README
+#+DESCRIPTION:
+#+KEYWORDS:
+#+AUTHOR:
+#+email:
+#+INFOJS_OPT:
+#+STARTUP:  content
+
+#+DATE: CREATED: <Sun Mar 26 18:22:14 MSK 2023>
+# Time-stamp: <Последнее обновление -- Sunday March 26 18:23:6 MSK 2023>
+
+Эта директория создана для опытов, что, впрочем видно из её названия.
