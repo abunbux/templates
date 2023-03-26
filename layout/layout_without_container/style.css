@@ -44,19 +44,26 @@ html {
   flex-direction: column;
 }
 
+/* header (class="header") */
+/* Содержит: */
+     /* логотип (class="header__logo"); */
+     /* навигация (class="header__nav nav"); */
+     /* ссылку на форму входа (class="header__form-input"). */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: var(--bg);
-  padding: 0 calc(50% - var(--contentWidth) / 2.5);
+  padding: 0 calc(50% - var(--contentWidth) / 2.2);
 }
 
-.header div {
-  padding: 30px 10px;
-}
 
-.block {
+/* main (class="main") */
+/* Основной контент. */
+/* Поделён на две части ->: */
+      /* aside (class="main__aside"); */
+      /* content (class="content"). */
+.main {
   flex: 1 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -66,21 +73,20 @@ html {
   margin: 0 calc(50% - var(--contentWidth) / 2);
 }
 
-.block__right {
-  border-left: 1px solid rgb(197, 194, 194);
+.main__aside-section-image {
+  width: 50%;
 }
 
-.content p, h1 {
-  padding: 5px 10px 0 15px;
-}
 
-.block__img {
-  width: 100%;
-}
-
+/* footer (class="footer") */
+/* Содержит: */
+      /* навигация (class="footer__nav nav"). */
 .footer {
-  margin: 0 calc(50% - var(--contentWidth) / 2);
+  padding: 0 calc(50% - var(--contentWidth) / 1.5);
 }
+
+
+
 
 /* Адаптивность */
 @media (max-width: 1000px) {
@@ -102,7 +108,7 @@ html {
   :root {
     --contentWidth: var(--mobile_small);
   }
-  .block {
+  .main {
     grid-template-columns: 1fr;
     align-content: start;
   }
