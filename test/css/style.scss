@@ -15,6 +15,7 @@ html {
   grid-template-rows: auto 1fr;
 }
 
+
 .wrapper {
   max-width: 1240px;
   min-height: 100%;
@@ -24,13 +25,14 @@ html {
   row-gap: 0.1em;
 }
 
+
 .header {
-  padding: 40px;
+  padding: 20px;
   background-color: var(--he_color);
   color: var(--text_color);
 
   &__logo {
-    font-size: 2.4em;
+    font-size: 1em;
     font-weight: 700;
     letter-spacing: 0.2em;
   }
@@ -63,16 +65,4 @@ html {
 
 .footer {
   background-color: var(--fo_color);
-
-  &__footer__nav {
-    margin: 1.2em;
-  }
-
-  &__footer__nav-li {
-    &__footer__nav-li a {
-      color: var(--fo_link_color);
-      font-size: 0.75em;
-      text-transform: uppercase;
-    }
-  }
 }

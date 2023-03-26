@@ -19,25 +19,32 @@ html {
   max-width: 1240px;
   min-height: 100%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   row-gap: 0.1em;
 }
 
 .header {
-  padding: 40px;
+  padding: 20px;
   background-color: var(--he_color);
   color: var(--text_color);
 }
 .header__logo {
-  font-size: 2.4em;
+  font-size: 1em;
   font-weight: 700;
   letter-spacing: 0.2em;
 }
 
 .adaptive {
   height: 100%;
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 0.15em;
@@ -50,19 +57,17 @@ html {
   text-transform: uppercase;
   /* color: var(--text_color);
         background: var(--bg_color); */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer {
   background-color: var(--fo_color);
-}
-.footer__footer__nav {
-  margin: 1.2em;
-}
-.footer__footer__nav-li__footer__nav-li a {
-  color: var(--fo_link_color);
-  font-size: 0.75em;
-  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
